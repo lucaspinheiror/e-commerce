@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+:root {
+    --title: hsl(220, 13%, 13%);
+    --text:  hsl(219, 9%, 45%);
+    --cinza-claro: hsl(220, 14%, 75%);
+    --d: hsl(223, 64%, 98%);
+    --c: hsl(0, 0%, 0%);
+}
+
+#navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    padding: 20px 28px;
+}
+
+#logo-burguer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+}
+
+#cart-avat {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 23px;
+    width: 50%;
+}
+
+#car img {
+    cursor: pointer;
+}
+
+#menu-burguer img {
+    margin-top: 5px;
+    height: 15px;
+}
+
+#avatar img{
+    width: 25px;
+    height: 25px;
+}
+/* CONTEÚDO  */
+
+main {
+    display: grid;
+    grid-template-areas: 
+    'produtos'
+    'conteudo';
+}
+
+
+#produtos {
+    position: relative;
+    grid-area: produtos;
+    background-color: blue;
+    min-height: 375px;
+} 
+
+#produtos img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#produtos #icon-voltar {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    padding: 13px;
+    border-radius: 50%;
+}
+
+#produtos #icon-avancar {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: .1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    padding: 13px;
+    border-radius: 50%;
+} 
+
+/* CONTEUDO COMPLETO */
+
+
+#conteudo {
+    grid-area: conteudo;
+    padding:  20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#mini-title {
+    color: var(--text);
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+#title {
+    color: var(--title);
+}
+
+#text {
+    color: var(--text);
+    text-align: left;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+/* PREÇOS */
+
+#price {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#price #left {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+#price #right {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#price #new-price {
+    font-size: 25px;
+}
+
+
+#price #desconto  {
+    background-color: var(--title);
+    color: white;
+    padding: 3px 9px;
+    border-radius: 6px;
+}
+
+#old-price {
+    color: var(--text);
+    font-size: 16px;
+}
+
+#quantia {
+    background-color: rgba(0, 0, 0, 0.041);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+
+    padding: 13px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+/* BUTTON ADICIONAR */
+
+#btn-add {
+    background-color: #FF7E1B;
+    border-radius: 10px;
+    border: none;
+    padding: 13px;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 700;
+    color: var(--title);
+}
+
+#btn-add:hover {
+    background-color: #ff7e1ba6;
+}
+
+#btn-add img {
+    width: 15px;
+    height: 15px;
+    color: var(--title);
+}
