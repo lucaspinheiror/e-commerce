@@ -21,9 +21,18 @@
   <header>
     <nav id="navigation">
 
+      <ul id="menu">
+        <img src="images/icon-close.svg" alt="" id="btn-menu">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
       <div id="logo-burguer">
         <div id="menu-burguer">
-          <img src="images/icon-menu.svg" alt="Menu Hamburguer">
+          <img src="images/icon-menu.svg" alt="Menu Hamburguer" class="icons">
         </div>
         <div id="logo">
           <img src="images/logo.svg" alt="Logo Sneakers">
@@ -32,15 +41,15 @@
 
       <div id="cart-avat">
         <div id="cart">
-          <img src="images/icon-cart.svg" alt="Carrinho de Compras">
+          <img src="images/icon-cart.svg" alt="Carrinho de Compras" class="icons">
         </div>
         <div id="avatar">
-          <img src="images/image-avatar.png" alt="Avatar">
+          <img src="images/image-avatar.png" alt="Avatar" class="icons">
         </div>
       </div>
 
     </nav>
-
+  </header>
     <main>
       <section id="produtos">
         <div id="icon-voltar" class="icons"><img src="images/icon-previous.svg" alt=""></div>
@@ -73,13 +82,16 @@
               <del id="old-price">$250.00</del>
             </div>
           </div>
+
           <div id="quantia">
-            <img src="images/icon-minus.svg" alt=""> 0 <img src="images/icon-plus.svg" alt="">
+            <img src="images/icon-minus.svg" alt="" class="icons" id="minus"> <span>0</span> <img src="images/icon-plus.svg" alt="" class="icons" id="plus">
           </div>
           <button id="btn-add"><img src="images/icon-cart.svg" alt=""> Add to cart</button>
         </section>
     </main>
-  </header>
+
+    <script src="js/script.js"></script>
+ 
 
   <!-- Collections
   Men
