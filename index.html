@@ -17,83 +17,59 @@
   </style>
 </head>
 <body>
-
-  <div id="overlay" class="overlay"></div>
   <header>
-    <nav id="navigation">
-
-      <ul id="menu">
-        <img src="images/icon-close.svg" alt="" id="btn-menu">
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-
-      <div id="logo-burguer">
-        <div id="menu-burguer">
-          <img src="images/icon-menu.svg" alt="Menu Hamburguer" class="icons">
-        </div>
-        <div id="logo">
-          <img src="images/logo.svg" alt="Logo Sneakers">
-        </div>
+    <section id="aba-top">
+      <div id="container-log-bug">
+        <img src="images/icon-menu.svg" alt="Menu" id="burguer">
+        <img src="images/logo.svg" alt="Logo" id="logo">
       </div>
-
-      <div id="cart-avat">
-        <div id="cart">
-          <img src="images/icon-cart.svg" alt="Carrinho de Compras" class="icons">
-        </div>
-        <div id="avatar">
-          <img src="images/image-avatar.png" alt="Avatar" class="icons">
-        </div>
+      <div id="container-cart-a">
+        <img src="images/icon-cart.svg" alt="Cart" id="cart">
+        <img src="images/image-avatar.png" alt="Avatar" id="avatar">
       </div>
-
+    </section>
+    <nav>
     </nav>
   </header>
 
-    <main>
-      <section id="produtos">
-        <div id="icon-voltar" class="icons"><img src="images/icon-previous.svg" alt=""></div>
-        <div id="icon-avancar" class="icons"><img src="images/icon-next.svg" alt=""></div>
-
-        <div class="container-images">
-          <img src="images/image-product-1.jpg" class="slider">
+  <main>
+    <section class="slider">
+        <div class="slides">
+            <img src="images/image-product-1.jpg" class="slide" alt="Imagem 1">
+            <img src="images/image-product-2.jpg" class="slide" alt="Imagem 2">
+            <img src="images/image-product-3.jpg" class="slide" alt="Imagem 3">
+            <img src="images/image-product-4.jpg" class="slide" alt="Imagem 4">
         </div>
-      </section>
+        <button class="prev" onclick="changeSlide(-1)"><img src="images/icon-previous.svg" alt=""></button>
+        <button class="next" onclick="changeSlide(1)"><img src="images/icon-next.svg" alt=""></button>
+    </section>
 
-        <section id="conteudo">
-        
-          <div id="mini-title">
-            <h5>SNEAKER COMPANY</h5>
-          </div>
-          <div id="title">
-            <h1>
-              Fall Limited Edition <br> Sneakers
-            </h1>
-          </div>
-          <div id="text">
-            <p>
-              These low-profile sneakers are your perfect casual wear companion. Featuring a
-              durable rubber outer sole, they’ll withstand everything the weather can offer.
-            </p>
-          </div>
-          <div id="price">
-            <div id="left">
-              <span id="new-price">$125.00</span>
-              <span id="desconto">50%</span>
-            </div>
-            <div id="right">
-              <del id="old-price">$250.00</del>
-            </div>
-          </div>
+    <section id="cont">
+      <h5 id="mini-title">SNEAKER COMPANY</h5>
 
-          <div id="quantia">
-            <img src="images/icon-minus.svg" alt="" class="icons" id="minus"> <span>0</span> <img src="images/icon-plus.svg" alt="" class="icons" id="plus">
-          </div>
-          <button id="btn-add"><img src="images/icon-cart.svg" alt=""> Add to cart</button>
-        </section>
-    </main>
+      <h1 id="title">Fall Limited Edition <br> Sneakers</h1>
+    
+      <p id="text">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+    
+      <div id="prices">
+        <div id="new-price">
+          $125.00
+          <span id="desconto">50%</span>
+        </div>
+        <div id="old-price"><del>$250.00</del></div>
+      </div>
+    
+      <div id="qtd-product">
+        <img src="images/icon-minus.svg" alt="Menos" id="minus"> <span>0</span> <img src="images/icon-plus.svg" alt="Mais" id="plus">
+      </div>
+      <button id="add-cart"><img src="images/icon-cart.svg" alt="Cart"> Add to cart</button>
+    </section>
+  </main>
+
+  
 
     <script src="js/script.js"></script>
  
