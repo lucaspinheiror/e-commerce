@@ -1,9 +1,3 @@
-const minus = document.querySelector('#minus');
-const plus = document.querySelector('#plus');
-const qtd = document.querySelector('#qtd-product span');
-
-let qtdProdutos = 0;
-
 // VARIÁVEIS PARA MENU MOBILE
 
 const burguer = document.querySelector('#burguer');
@@ -11,6 +5,21 @@ const closeBtn = document.querySelector('#close-btn');
 const menu = document.querySelector('#navigation');
 const overlay = document.querySelector('.overlay');
 
+// ISERIR E REDUZIR PRODUTO
+
+const minus = document.querySelector('#minus');
+const plus = document.querySelector('#plus');
+const qtd = document.querySelector('#qtd-product span');
+
+let qtdProdutos = 0;
+
+
+// CART
+
+const btnAddCart = document.querySelector('#add-cart'); // BOTÃO PARA ADICIONAR AO CART
+const cart = document.querySelector('#cart');
+const cartItens = document.querySelector('#cart-itens');
+const contentCart = document.querySelector('#content-cart');
 
 // FUNÇÕES DE ABRIR E FEHCAR MENU
 
@@ -29,39 +38,7 @@ function fecharMenu(){
     overlay.style.visibility = 'hidden';
 }
 
-
-// const burguer = document.querySelector('#menu-burguer'); 
-// const btnCloseMenu = document.querySelector('#btn-menu');
-// const menu = document.querySelector('#menu');
-
-// const body = document.body;
-
-// // FUNÇÕES DE ABRIR E FECHAR MENU
-
-// burguer.addEventListener('click', abrirMenu);
-// btnCloseMenu.addEventListener('click', fecharMenu);
-
-// function abrirMenu(){
-//     menu.classList.add('abrir');
-
-//     document.querySelector('#overlay').classList.add('active'); // FUNDO ESCURO 
-
-//     if(menu.style.overflow = 'auto'){
-//         body.style.overflow = 'hidden'   // IMPEDIR ROLAGEM COM MENU ABERTO
-//     } 
-// }
-
-// function fecharMenu(){
-//     menu.classList.remove('abrir');
-
-//     document.querySelector('#overlay').classList.remove('active');
-
-//     if(menu.style.overflow = 'hidden'){
-//         body.style.overflow = 'auto';
-//     }   
-// }
-
-// // FUNÇÕES DE ADICIONAR E REMOVER PRODUTO
+// FUNÇÕES DE INSERIR E REDUZIR PRODUTO
 
 plus.addEventListener('click', inserirProduto);
 minus.addEventListener('click', reduzirProduto);
@@ -84,6 +61,24 @@ function reduzirProduto(){
     qtd.textContent = qtdProdutos; // ATUALIZA O ELEMENTO DOM
 }
 
+// FUNÇÃO TOGGLE CART
+
+cart.addEventListener('click', toggleCart);
+
+function toggleCart(){
+    cartItens.classList.toggle('aberto');
+}
+
+// FUNÇÃO ADD CART
+
+btnAddCart.addEventListener('click', adicionarCart);
+
+function adicionarCart(){
+    contentCart.textContent = 'Fall Limited Edition Sneakers';
+}
+
+
+// FUNÇÃO SLIDER    
 
 let currentIndex = 0;
 
