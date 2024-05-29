@@ -4,6 +4,32 @@ const qtd = document.querySelector('#qtd-product span');
 
 let qtdProdutos = 0;
 
+// VARIÁVEIS PARA MENU MOBILE
+
+const burguer = document.querySelector('#burguer');
+const closeBtn = document.querySelector('#close-btn');
+const menu = document.querySelector('#navigation');
+const overlay = document.querySelector('.overlay');
+
+
+// FUNÇÕES DE ABRIR E FEHCAR MENU
+
+burguer.addEventListener('click', abrirMenu);
+closeBtn.addEventListener('click', fecharMenu);
+
+function abrirMenu(){
+    menu.classList.add('abrir');
+
+    overlay.style.visibility = 'visible';
+}
+
+function fecharMenu(){
+    menu.classList.remove('abrir');
+
+    overlay.style.visibility = 'hidden';
+}
+
+
 // const burguer = document.querySelector('#menu-burguer'); 
 // const btnCloseMenu = document.querySelector('#btn-menu');
 // const menu = document.querySelector('#menu');
@@ -37,10 +63,10 @@ let qtdProdutos = 0;
 
 // // FUNÇÕES DE ADICIONAR E REMOVER PRODUTO
 
-plus.addEventListener('click', adicionarProduto);
+plus.addEventListener('click', inserirProduto);
 minus.addEventListener('click', reduzirProduto);
 
-function adicionarProduto(){
+function inserirProduto(){
 
      if(qtdProdutos < 10){
          qtdProdutos++;
