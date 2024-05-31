@@ -17,9 +17,18 @@ let qtdProdutos = 0;
 // CART
 
 const btnAddCart = document.querySelector('#add-cart'); // BOTÃO PARA ADICIONAR AO CART
+const del = document.querySelector('#delete');
+const btnCheck = document.querySelector('#btn-check');
+
 const cart = document.querySelector('#cart');
 const cartItens = document.querySelector('#cart-itens');
 const contentCart = document.querySelector('#content-cart');
+const cartFull = document.querySelector('#content-cart-full');
+const cartEmpty = document.querySelector('#content-cart-empty');
+
+const valorCart = document.querySelector('.cart-valor');
+const multiplicador = document.querySelector('.multiplicador');
+const price = document.querySelector('.price');
 
 // FUNÇÕES DE ABRIR E FEHCAR MENU
 
@@ -72,11 +81,49 @@ function toggleCart(){
 // FUNÇÃO ADD CART
 
 btnAddCart.addEventListener('click', adicionarCart);
+del.addEventListener('click', removerProduto);
 
 function adicionarCart(){
-    contentCart.textContent = 'Fall Limited Edition Sneakers';
+
+    if (qtdProdutos === 0) {
+        alert('Valor inválido');
+    } else {
+        
+        let valorAtual = parseInt(valorCart.textContent);
+
+        if (valorAtual >= 30) {
+            alert('Limite de 30 produtos alcançado');
+        } else {
+            
+            if (valorAtual + qtdProdutos > 30) {
+                alert('O valor ultrapassa o limite de 30 produtos, insira uma quantia menor');
+            } else {
+
+                valorCart.textContent = valorAtual + qtdProdutos;
+
+                multiplicador.textContent = valorAtual + qtdProdutos;
+
+                price.textContent = '$' + parseInt((valorAtual + qtdProdutos) * 125).toFixed(2);
+    
+                valorCart.style.visibility = 'visible';
+            }
+        }
+
+        cartFull.style.display = 'inherit'   
+        cartEmpty.style.display = 'none';
+        btnCheck.style.display = 'inline'       
+    }
 }
 
+function removerProduto(){
+    
+    valorCart.style.visibility = 'hidden';
+    valorCart.textContent = 0;
+
+    cartFull.style.display = 'none';
+    cartEmpty.style.display = 'flex'
+    btnCheck.style.display = 'none';
+}
 
 // FUNÇÃO SLIDER    
 
