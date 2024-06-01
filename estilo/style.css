@@ -30,6 +30,10 @@
     transition: .5s ease;
 }
 
+#navigation-desk {
+    display: none;
+}
+
 #navigation.abrir {
     width: 247px;
     visibility: visible;
@@ -184,8 +188,9 @@
     top: 18px;
     z-index: 1;
 
+    width: 22px; 
     text-align: center;
-    padding: 1px 8px;
+    padding: 1px 0px 1px 0px;
     background-color: #FF7E1B;
     font-size: 10px;
     border-radius: 10px;
@@ -346,6 +351,7 @@
 
 #add-cart {
     background-color: #FF7E1B;
+    box-shadow: 0px 4px 12px 5px #ff7e1b59;
     gap: 15px;
     cursor: pointer;
     padding: 16px;
