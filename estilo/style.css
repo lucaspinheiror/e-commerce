@@ -220,6 +220,10 @@
 
 /* MAIN */
 
+#produtos {
+    display: none;
+}
+
 .slider {
     position: relative;
     min-width: 375px;

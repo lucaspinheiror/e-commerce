@@ -8,6 +8,13 @@
         --black: hsl(0, 0%, 0%);
     }
 
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
     header {
         padding: 35px 120px 0px 120px;
     }
@@ -24,7 +31,9 @@
 
     #aba-top {
         padding: 0 0 35px 0;
-        border-bottom: 1px solid hsl(220, 14%, 75%);
+        border-bottom: 1px solid hsla(220, 14%, 75%, 0.178);
+        max-width: 1200px;
+        margin: auto;
     }
 
     #container-log-bug {
@@ -48,22 +57,81 @@
     }
 
     #navigation-desk a {
-        transition: 2s ease;
         color: var(--cinza-claro);
-        font-weight: 700;
         text-decoration: none;
-    }
-
-    #navigation-desk a::before {
-        content: '';
-        width: 0;
-        height: 0;
-        color: black;
+        transition: .3s linear;
     }
 
     #navigation-desk a:hover {
-        background-color: white;
-        width: 2px;
-        height: 2px;
+        color: var(--title);
+    }
+
+    #navigation-desk a::after {
+        position: relative;
+        bottom: -48px;
+        content: '';
+        width: 0;
+        display: block;
+        height: 3px;
+        margin: auto;
+        background-color: #ff7e1bb9;
+        transition: width .3s linear;
+    }
+
+    #navigation-desk a:hover::after {
+        width: 100%;
+    }
+
+    main {
+        display: grid;
+        grid-template-areas: 'produto descricao';
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+        padding: 0px 160px 0px 160px;
+    }
+
+    .slider {
+        display: none;
+    }
+
+    #produtos {
+        grid-area: produto;
+        display: inherit;
+    }
+
+    #produtos img {
+        border-radius: 15px;
+        width: 550px;
+        height: 550px;
+    }
+
+    #cont {
+        grid-area: descricao;
+        padding: 0;
+        max-width: 438px;
+    }
+
+    #title {
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+
+    #text {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width:1387px){
+    main {
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1388px){
+    main {
+        gap: 140px;
     }
 }

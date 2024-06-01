@@ -30,6 +30,7 @@ const valorCart = document.querySelector('.cart-valor');
 const multiplicador = document.querySelector('.multiplicador');
 const price = document.querySelector('.price');
 
+
 // FUNÇÕES DE ABRIR E FEHCAR MENU
 
 burguer.addEventListener('click', abrirMenu);
@@ -133,15 +134,13 @@ function updateButtons() {
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     const totalSlides = document.querySelectorAll('.slide').length;
-
-    // Enable or disable the prev button
+    
     if (currentIndex === 0) {
         prevButton.disabled = true;
     } else {
         prevButton.disabled = false;
     }
 
-    // Enable or disable the next button
     if (currentIndex === totalSlides - 1) {
         nextButton.disabled = true;
     } else {
@@ -153,28 +152,21 @@ function changeSlide(direction) {
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
 
-    // Determine the new index
     let newIndex = currentIndex + direction;
 
-    // Ensure the new index is within bounds
     if (newIndex < 0 || newIndex >= totalSlides) {
-        return; // Do nothing if out of bounds
+        return; 
     }
 
-    // Hide current slide
     slides[currentIndex].style.display = 'none';
 
-    // Update to new index
     currentIndex = newIndex;
 
-    // Show new slide
     slides[currentIndex].style.display = 'block';
 
-    // Update button states
     updateButtons();
 }
 
-// Initialize the slider by showing the first slide and setting button states
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.slide');
     slides[currentIndex].style.display = 'block';
