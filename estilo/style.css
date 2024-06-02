@@ -331,6 +331,11 @@
     color: white;
 }
 
+#buttons-final button {
+    margin-top: 20px;
+    width: 100%;
+}
+
 #qtd-product,
 #add-cart {
     display: flex;

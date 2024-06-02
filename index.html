@@ -21,6 +21,8 @@
 <body>
   <header>
     <section id="aba-top">
+      <div class="cart-valor">0</div>
+
       <div id="container-log-bug">
         <img src="images/icon-menu.svg" alt="Menu" id="burguer">
         <img src="images/logo.svg" alt="Logo" id="logo">
@@ -71,7 +73,7 @@
     </section>
 
     <div class="overlay"></div>   
-    <div class="cart-valor">0</div>
+
   </header>
 
   <main>
@@ -88,7 +90,13 @@
     </section>
 
     <section id="produtos">
-      <img src="images/image-product-1.jpg">
+      <img src="images/image-product-1.jpg" id="amostra">
+      <article id="container-imagens">
+        <img src="images/image-product-1-thumbnail.jpg" class="imagens">
+        <img src="images/image-product-2-thumbnail.jpg" class="imagens">
+        <img src="images/image-product-3-thumbnail.jpg" class="imagens">
+        <img src="images/image-product-4-thumbnail.jpg" class="imagens">
+      </article>
     </section>
 
     <section id="cont">
@@ -109,10 +117,12 @@
         <div id="old-price"><del>$250.00</del></div>
       </div>
     
-      <div id="qtd-product">
-        <img src="images/icon-minus.svg" alt="Menos" id="minus"> <span>0</span> <img src="images/icon-plus.svg" alt="Mais" id="plus">
-      </div>
-      <button id="add-cart"><img src="images/icon-cart.svg" alt="Cart"> Add to cart</button>
+      <article id="buttons-final">
+        <div id="qtd-product">
+          <img src="images/icon-minus.svg" alt="Menos" id="minus"> <span>0</span> <img src="images/icon-plus.svg" alt="Mais" id="plus">
+        </div>
+        <button id="add-cart"><img src="images/icon-cart.svg" alt="Cart"> Add to cart</button>
+      </article>
     </section>
   </main>
 
