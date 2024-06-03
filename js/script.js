@@ -1,7 +1,7 @@
 // VARIÁVEIS PARA MENU MOBILE
 
 const burguer = document.querySelector('#burguer');
-const closeBtn = document.querySelector('#close-btn');
+const closeBtn = document.querySelector('.close-btn');
 const menu = document.querySelector('#navigation');
 const overlay = document.querySelector('.overlay');
 
