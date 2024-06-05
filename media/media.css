@@ -140,6 +140,7 @@
     }
 
     .overlay {
+        background-color: rgba(0, 0, 0, 0.644);
         z-index: 0;
     }
 
@@ -149,10 +150,6 @@
         border: none;
         outline: none;
         background-color: transparent;
-    }
-
-    #modal::backdrop {
-        background-color: rgba(0, 0, 0, 0.664);
     }
 
     #modal div:nth-child(1) {
@@ -165,6 +162,7 @@
     #modal #amostra-modal {
         width: 100%;
         border-radius: 10px;
+        cursor: pointer;
     }
 
     #modal .close-btn-modal {
@@ -187,6 +185,9 @@
         width: 90px;
         height: 90px;
         border-radius: 10px;
+        cursor: pointer;
+        transition: .4s ease;
+        border: none;
     } 
 
     #cont {

@@ -172,3 +172,49 @@ document.addEventListener('DOMContentLoaded', () => {
     slides[currentIndex].style.display = 'block';
     updateButtons();
 });
+
+// Funções desktop
+
+const amostra = document.querySelector('#amostra');
+const modal = document.querySelector('#modal');
+const btnFechar = document.querySelector('.close-btn-modal');
+const imagens = document.querySelectorAll('.imagens');
+
+const amostraModal = document.querySelector('#amostra-modal');
+const imagensModal = document.querySelectorAll('.imagens-modal');
+
+// Função Abrir e Fechar Modal
+
+amostra.addEventListener('click', focarProdutos);
+
+function focarProdutos(){
+    modal.setAttribute('open', 'open')
+
+    overlay.style.visibility = 'visible';
+}
+
+btnFechar.addEventListener('click', fecharProdutos);
+
+function fecharProdutos(){
+    modal.removeAttribute('open', 'open');
+
+    overlay.style.visibility = 'hidden';
+}
+
+// Trocar a Imagem Principal
+
+imagens.forEach(function(imagem) {
+    const imagemClicada = imagem; 
+    imagem.addEventListener('click', function() {
+      amostra.src = imagemClicada.src;
+    });
+  });
+
+// Trocar Imagem Principal do Modal
+
+imagensModal.forEach(function(imagem) {
+    const imagemClicada = imagem; 
+    imagem.addEventListener('click', function() {
+      amostraModal.src = imagemClicada.src;
+    });
+  });
