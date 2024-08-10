@@ -1,2 +1,2 @@
 # e-commerce
- e-commerce sapataria
+ E-commerce de uma sapataria
