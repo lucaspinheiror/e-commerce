@@ -6,17 +6,12 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | E-commerce product page</title>
+  <title>E-commerce Sneaker</title>
 
   <link rel="stylesheet" href="estilo/style.css">
 
   <link rel="stylesheet" href="media/media.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <header>
@@ -24,50 +19,50 @@
       <div class="cart-valor">0</div>
 
       <div id="container-log-bug">
-        <img src="images/icon-menu.svg" alt="Menu" id="burguer">
-        <img src="images/logo.svg" alt="Logo" id="logo">
+        <img src="img/icon-menu.svg" alt="Menu" id="burguer">
+        <img src="img/logo.svg" alt="Logo" id="logo">
       </div>
 
       <nav id="navigation-desk">
         <ul>
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Coleções</a></li>
+          <li><a href="#">Homens</a></li>
+          <li><a href="#">Mulheres</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
       </nav>
 
       <div id="container-cart-a">
-        <img src="images/icon-cart.svg" alt="Cart" id="cart">
-        <img src="images/image-avatar.png" alt="Avatar" id="avatar">
+        <img src="img/icon-cart.svg" alt="Cart" id="cart">
+        <img src="img/image-avatar.png" alt="Avatar" id="avatar">
       </div>
 
       <div id="cart-itens">
         <h4>Cart</h4>
         <div id="content-cart-full">
-          <img src="images/image-product-1-thumbnail.jpg" alt="">
+          <img src="img/image-product-1-thumbnail.jpg" alt="">
           <div id="texts">
-            <span class="valor">Fall limited Edition Sneakers</span>
+            <span class="valor">Sneakers Edição Limitada</span>
             <p><span class="valor">$125.00 x <span class="multiplicador valor">0</span></span> <span class="price"></span></p>
           </div>
-          <img src="images/icon-delete.svg" alt="" id="delete">
+          <img src="img/icon-delete.svg" alt="" id="delete">
         </div>
-        <button id="btn-check">Checkout</button>
+        <button id="btn-check">Comprar</button>
         
         <div id="content-cart-empty">
-          <p>Your cart is empty.</p>
+          <p>Seu cart está vazio.</p>
         </div>
       </div>
 
       <nav id="navigation">
-        <img src="images/icon-close.svg" alt="" class="close-btn">
+        <img src="img/icon-close.svg" alt="" class="close-btn">
         <ul>
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Coleções</a></li>
+          <li><a href="#">Homens</a></li>
+          <li><a href="#">Mulheres</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
       </nav>     
     </section>
@@ -79,49 +74,48 @@
   <main>
     <section class="slider">
         <div class="slides">
-            <img src="images/image-product-1.jpg" class="slide" alt="Imagem 1">
-            <img src="images/image-product-2.jpg" class="slide" alt="Imagem 2">
-            <img src="images/image-product-3.jpg" class="slide" alt="Imagem 3">
-            <img src="images/image-product-4.jpg" class="slide" alt="Imagem 4">
+            <img src="img/image-product-1.jpg" class="slide" alt="Imagem 1">
+            <img src="img/image-product-2.jpg" class="slide" alt="Imagem 2">
+            <img src="img/image-product-3.jpg" class="slide" alt="Imagem 3">
+            <img src="img/image-product-4.jpg" class="slide" alt="Imagem 4">
         </div>
 
-        <button class="prev" onclick="changeSlide(-1)"><img src="images/icon-previous.svg" alt=""></button>
-        <button class="next" onclick="changeSlide(1)"><img src="images/icon-next.svg" alt=""></button>
+        <button class="prev" onclick="changeSlide(-1)"><img src="img/icon-previous.svg" alt=""></button>
+        <button class="next" onclick="changeSlide(1)"><img src="img/icon-next.svg" alt=""></button>
     </section>
 
     <section id="produtos">
-      <img src="images/image-product-1.jpg" id="amostra">
+      <img src="img/image-product-1.jpg" id="amostra">
 
       <article id="container-imagens">
-        <img src="images/image-product-1.jpg" class="imagens">
-        <img src="images/image-product-2.jpg" class="imagens">
-        <img src="images/image-product-3.jpg" class="imagens">
-        <img src="images/image-product-4.jpg" class="imagens">
+        <img src="img/image-product-1.jpg" class="imagens">
+        <img src="img/image-product-2.jpg" class="imagens">
+        <img src="img/image-product-3.jpg" class="imagens">
+        <img src="img/image-product-4.jpg" class="imagens">
       </article>
     </section>
 
     <dialog id="modal">
       <div>
-        <img src="images/icon-close.svg" class="close-btn-modal">
-        <img src="images/image-product-1.jpg" id="amostra-modal">
+        <img src="img/icon-close.svg" class="close-btn-modal">
+        <img src="img/image-product-1.jpg" id="amostra-modal">
       </div>
 
       <div id="produtos-modal">
-        <img src="images/image-product-1.jpg" class="imagens-modal">
-        <img src="images/image-product-2.jpg" class="imagens-modal">
-        <img src="images/image-product-3.jpg" class="imagens-modal">
-        <img src="images/image-product-4.jpg" class="imagens-modal">
+        <img src="img/image-product-1.jpg" class="imagens-modal">
+        <img src="img/image-product-2.jpg" class="imagens-modal">
+        <img src="img/image-product-3.jpg" class="imagens-modal">
+        <img src="img/image-product-4.jpg" class="imagens-modal">
       </div>
     </dialog>
 
     <section id="cont">
-      <h5 id="mini-title">SNEAKER COMPANY</h5>
+      <h5 id="mini-title">COMPÃNIA SNEAKER</h5>
 
-      <h1 id="title">Fall Limited Edition <br> Sneakers</h1>
+      <h1 id="title">Sneakers Edição Limitada de Outono</h1>
     
       <p id="text">
-        These low-profile sneakers are your perfect casual wear companion. Featuring a
-        durable rubber outer sole, they’ll withstand everything the weather can offer.
+        Estes tênis de baixo perfil são o companheiro perfeito para uso casual. Apresentando uma sola externa de borracha durável, eles resistirão a tudo o que o clima pode oferecer.
       </p>
     
       <div id="prices">
@@ -134,22 +128,14 @@
     
       <article id="buttons-final">
         <div id="qtd-product">
-          <img src="images/icon-minus.svg" alt="Menos" id="minus"> <span>0</span> <img src="images/icon-plus.svg" alt="Mais" id="plus">
+          <img src="img/icon-minus.svg" alt="Menos" id="minus"> <span>0</span> <img src="img/icon-plus.svg" alt="Mais" id="plus">
         </div>
-        <button id="add-cart"><img src="images/icon-cart.svg" alt="Cart"> Add to cart</button>
+        <button id="add-cart"><img src="img/icon-cart.svg" alt="Cart">Adicionar ao Cart</button>
       </article>
     </section>
   </main>
 
-  
-
     <script src="js/script.js"></script>
     <script src="js/desktop.js"></script>
- 
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>  -->
 </body>
 </html>

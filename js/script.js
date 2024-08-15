@@ -5,7 +5,7 @@ const closeBtn = document.querySelector('.close-btn');
 const menu = document.querySelector('#navigation');
 const overlay = document.querySelector('.overlay');
 
-// ISERIR E REDUZIR PRODUTO
+// INSERIR E REDUZIR PRODUTO
 
 const minus = document.querySelector('#minus');
 const plus = document.querySelector('#plus');
